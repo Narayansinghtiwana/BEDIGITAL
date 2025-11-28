@@ -1,545 +1,590 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Be Digital - Your Partner in Success</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <title>Be Digital – Affordable Website Setup & Support</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background-color: #122c28;
-            color: #d4e157;
-            line-height: 1.6;
-        }
+  <!-- Basic SEO -->
+  <meta name="description" content="Be Digital helps small businesses get online with affordable website setup, design and ongoing support.">
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
 
-        /* Header */
-        header {
-            position: sticky;
-            top: 0;
-            background-color: #122c28;
-            border-bottom: 1px solid rgba(88, 125, 120, 0.2);
-            z-index: 1000;
-            padding: 1rem 0;
-        }
+    :root{
+      --bg:#122c28;
+      --bg-dark:#0b1916;
+      --card:#0d2320;
+      --text:#e5f5f2;
+      --muted:#a3b9b5;
+      --accent:#d4e157;      /* lime CTA colour */
+      --accent-soft:#8fc5d4; /* soft blue for secondary */
+      --border:#355954;
+      --max:1100px;
+    }
 
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #d4e157;
-            text-decoration: none;
-        }
+    a{color:inherit;text-decoration:none;}
 
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 4px;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
+    .container{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 20px;
+    }
 
-        .hamburger span {
-            width: 24px;
-            height: 2px;
-            background-color: #d4e157;
-        }
+    /* Header */
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(11,25,22,0.97);
+      border-bottom:1px solid rgba(88,125,120,0.5);
+      backdrop-filter:blur(10px);
+    }
+    .nav-row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:.75rem 0;
+    }
+    .logo{
+      font-size:1.2rem;
+      font-weight:600;
+      color:var(--accent);
+      letter-spacing:.05em;
+    }
+    nav{
+      display:flex;
+      gap:1.2rem;
+      font-size:.9rem;
+      color:var(--muted);
+    }
+    nav a:hover{color:var(--accent);}
 
-        .cta-link {
-            color: #d4e157;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: opacity 0.3s;
-        }
+    .hamburger{
+      display:none;
+      flex-direction:column;
+      gap:4px;
+      background:none;
+      border:none;
+      cursor:pointer;
+    }
+    .hamburger span{
+      width:20px;
+      height:2px;
+      background:var(--accent);
+    }
 
-        .cta-link:hover {
-            opacity: 0.8;
-        }
+    /* Generic sections */
+    section{padding:4rem 0;}
+    h2.section-title{
+      font-size:2.2rem;
+      margin-bottom:.75rem;
+      color:var(--accent);
+    }
+    .section-sub{
+      color:var(--muted);
+      margin-bottom:2rem;
+      font-size:.95rem;
+    }
 
-        /* Hero Section */
-        .hero {
-            position: relative;
-            height: 600px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            overflow: hidden;
-        }
+    /* Hero */
+    .hero{
+      position:relative;
+      height:420px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      overflow:hidden;
+    }
+    .hero-bg{
+      position:absolute;
+      inset:0;
+      background:url("https://ext.same-assets.com/3677438696/2598981837.jpeg") center/cover no-repeat;
+      filter:brightness(.45);
+    }
+    .hero-inner{
+      position:relative;
+      z-index:2;
+      max-width:720px;
+      padding:0 20px;
+    }
+    .hero-pill{
+      display:inline-block;
+      padding:0.25rem .8rem;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.5);
+      font-size:.75rem;
+      color:#fefefe;
+      margin-bottom:.8rem;
+    }
+    .hero h1{
+      font-size:2.6rem;
+      margin-bottom:.8rem;
+      color:#fff;
+    }
+    .hero h1 span{color:var(--accent);}
+    .hero-lead{
+      font-size:1.05rem;
+      color:#f5f5f5;
+      margin-bottom:1.5rem;
+    }
+    .hero-price{
+      font-size:1.2rem;
+      margin-bottom:1.5rem;
+      color:var(--accent-soft);
+    }
+    .hero-price span{
+      font-size:1.5rem;
+      font-weight:700;
+      color:var(--accent);
+    }
+    .hero-ctas{
+      display:flex;
+      justify-content:center;
+      gap:1rem;
+      flex-wrap:wrap;
+    }
 
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('https://ext.same-assets.com/3677438696/2598981837.jpeg');
-            background-size: cover;
-            background-position: center;
-            filter: brightness(0.7);
-        }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:.8rem 1.6rem;
+      border-radius:999px;
+      border:none;
+      cursor:pointer;
+      font-weight:600;
+      font-size:.95rem;
+      transition:all .18s;
+      text-decoration:none;
+    }
+    .btn-primary{
+      background:#58b0bc;
+      color:#122c28;
+      box-shadow:0 10px 25px rgba(22,163,174,.5);
+    }
+    .btn-primary:hover{
+      background:#4a9aa5;
+      transform:translateY(-1px);
+    }
+    .btn-secondary{
+      background:transparent;
+      border:1px solid var(--accent-soft);
+      color:var(--accent-soft);
+    }
+    .btn-secondary:hover{
+      background:rgba(143,197,212,.15);
+    }
 
-        .hero-content {
-            position: relative;
-            z-index: 10;
-            max-width: 900px;
-            padding: 0 20px;
-        }
+    /* Layout helpers */
+    .two-col{
+      display:grid;
+      grid-template-columns:minmax(0,3fr) minmax(0,2.5fr);
+      gap:2.5rem;
+      align-items:flex-start;
+    }
 
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: bold;
-            color: white;
-            margin-bottom: 1.5rem;
-        }
+    .card{
+      background:var(--card);
+      border-radius:14px;
+      border:1px solid var(--border);
+      padding:1.5rem 1.6rem;
+      margin-bottom:1.2rem;
+    }
 
-        .hero p {
-            font-size: 1.25rem;
-            color: white;
-            margin-bottom: 2rem;
-        }
+    /* Services */
+    .services-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:1.5rem;
+    }
+    .service-card{
+      background:var(--card);
+      border-radius:12px;
+      border:1px solid var(--accent);
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+    }
+    .service-card img{
+      width:100%;
+      height:190px;
+      object-fit:cover;
+    }
+    .service-body{
+      padding:1.1rem 1.3rem 1.4rem;
+      flex:1;
+      display:flex;
+      flex-direction:column;
+      gap:.4rem;
+    }
+    .service-title{
+      font-size:1.1rem;
+      font-weight:600;
+    }
+    .service-price{
+      font-size:1.1rem;
+      color:var(--accent);
+      margin-top:.4rem;
+    }
+    .service-cta{
+      margin-top:.8rem;
+    }
 
-        .btn {
-            display: inline-block;
-            padding: 1rem 2rem;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-        }
+    /* Social proof */
+    .testimonials{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:1.3rem;
+    }
+    .quote{
+      font-size:.92rem;
+      color:var(--muted);
+      margin-bottom:.6rem;
+    }
+    .quote-name{
+      font-size:.9rem;
+      font-weight:600;
+      color:var(--accent-soft);
+    }
+    .quote-role{
+      font-size:.8rem;
+      color:var(--muted);
+    }
 
-        .btn-primary {
-            background-color: #58b0bc;
-            color: #122c28;
-        }
+    /* Process */
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:1rem;
+    }
+    .step{
+      background:var(--card);
+      border-radius:12px;
+      border:1px solid var(--border);
+      padding:1rem 1.1rem;
+      font-size:.9rem;
+    }
+    .step-num{
+      font-size:.8rem;
+      color:var(--accent-soft);
+      margin-bottom:.2rem;
+    }
+    .step-title{
+      font-weight:600;
+      margin-bottom:.2rem;
+    }
 
-        .btn-primary:hover {
-            background-color: #4a9aa5;
-        }
+    /* Contact */
+    .contact-grid{
+      display:grid;
+      grid-template-columns:minmax(0,2.2fr) minmax(0,2.2fr);
+      gap:2rem;
+    }
+    .contact-row{
+      margin-bottom:.6rem;
+      font-size:.95rem;
+    }
+    .contact-row span{
+      color:var(--muted);
+      margin-right:.4rem;
+    }
+    form{
+      display:grid;
+      gap:.7rem;
+    }
+    input,textarea{
+      width:100%;
+      padding:.7rem .8rem;
+      border-radius:8px;
+      border:1px solid var(--border);
+      background:#0a1916;
+      color:var(--text);
+      font-size:.9rem;
+    }
+    input:focus,textarea:focus{
+      outline:none;
+      border-color:var(--accent-soft);
+    }
+    textarea{resize:vertical;min-height:120px;}
 
-        .btn-secondary {
-            background-color: #a8d5e2;
-            color: #122c28;
-        }
+    /* Footer */
+    footer{
+      background:#0b1916;
+      border-top:1px solid rgba(65,99,92,.8);
+      padding:1.4rem 0 1.8rem;
+      font-size:.8rem;
+      color:var(--muted);
+    }
+    .footer-inner{
+      display:flex;
+      justify-content:space-between;
+      gap:1rem;
+      flex-wrap:wrap;
+      align-items:center;
+    }
 
-        .btn-secondary:hover {
-            background-color: #8fc5d4;
-        }
-
-        /* Services Section */
-        .services {
-            padding: 5rem 0;
-        }
-
-        .section-title {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #d4e157;
-            margin-bottom: 3rem;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background-color: #0d2320;
-            border: 2px solid #d4e157;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .service-card img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
-
-        .service-card-content {
-            padding: 1.5rem;
-        }
-
-        .service-card h3 {
-            font-size: 1.5rem;
-            color: #d4e157;
-            margin-bottom: 1rem;
-        }
-
-        .service-divider {
-            border-top: 1px solid #d4e157;
-            margin: 1rem 0;
-        }
-
-        .service-price {
-            font-size: 1.25rem;
-            color: #d4e157;
-            margin-bottom: 1.5rem;
-        }
-
-        .service-card .btn {
-            width: 100%;
-            text-align: center;
-        }
-
-        /* Offerings Section */
-        .offerings {
-            padding: 5rem 0;
-            text-align: center;
-        }
-
-        .offerings p {
-            color: #d1d4ca;
-            margin-bottom: 2rem;
-        }
-
-        /* Vision Section */
-        .vision {
-            padding: 5rem 0;
-        }
-
-        .vision-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 3rem;
-            align-items: center;
-            margin-top: 3rem;
-        }
-
-        .vision-image img {
-            width: 100%;
-            border-radius: 8px;
-        }
-
-        .vision-content h3 {
-            font-size: 1.75rem;
-            color: #d4e157;
-            margin-bottom: 1.5rem;
-        }
-
-        .vision-content p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-        }
-
-        /* Gallery Section */
-        .gallery {
-            padding: 3rem 0;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-        }
-
-        .gallery-grid img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #0d2320;
-            padding: 4rem 0 2rem;
-            border-top: 1px solid rgba(88, 125, 120, 0.2);
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .footer-section h3 {
-            font-size: 1.5rem;
-            color: #d4e157;
-            margin-bottom: 1.5rem;
-        }
-
-        .footer-section input[type="email"] {
-            width: 100%;
-            padding: 0.75rem;
-            background-color: transparent;
-            border: 1px solid #d4e157;
-            color: #d4e157;
-            border-radius: 4px;
-            margin-bottom: 1rem;
-            font-size: 1rem;
-        }
-
-        .footer-section input[type="email"]:focus {
-            outline: none;
-            border-color: #58b0bc;
-        }
-
-        .checkbox-label {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #d4e157;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        .checkbox-label input[type="checkbox"] {
-            width: 18px;
-            height: 18px;
-        }
-
-        .footer-links {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-        }
-
-        .footer-links a {
-            color: #d4e157;
-            text-decoration: none;
-            transition: opacity 0.3s;
-        }
-
-        .footer-links a:hover {
-            opacity: 0.8;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(88, 125, 120, 0.2);
-            padding-top: 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .copyright {
-            color: #d4e157;
-            font-size: 0.9rem;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .social-links a {
-            transition: opacity 0.3s;
-        }
-
-        .social-links a:hover {
-            opacity: 0.8;
-        }
-
-        .social-links img {
-            width: 24px;
-            height: 24px;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .section-title {
-                font-size: 2.5rem;
-            }
-
-            .vision-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
-    </style>
+    /* Responsive */
+    @media(max-width:900px){
+      .two-col{grid-template-columns:1fr;}
+      .contact-grid{grid-template-columns:1fr;}
+      nav{display:none;}
+      .hamburger{display:flex;}
+      .hero{height:380px;}
+    }
+    @media(max-width:600px){
+      .hero h1{font-size:2.1rem;}
+      h2.section-title{font-size:1.9rem;}
+      .hero{height:360px;}
+    }
+  </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="#" class="logo">Be Digital</a>
-                <button class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <a href="#contact" class="cta-link">Reach Out Today</a>
+
+<header>
+  <div class="container">
+    <div class="nav-row">
+      <a href="#top" class="logo">Be Digital</a>
+
+      <nav id="mainNav">
+        <a href="#services">Services</a>
+        <a href="#why">Why us</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-inner">
+      <div class="hero-pill">Your partner in affordable digital growth</div>
+      <h1>Your Partner in <span>Digital Success</span></h1>
+      <p class="hero-lead">
+        Simple, clean websites for small businesses that want to look professional without paying agency prices.
+      </p>
+      <p class="hero-price">
+        Complete website setup package from <span>£499</span>
+      </p>
+      <div class="hero-ctas">
+        <a href="#services" class="btn btn-primary">View services</a>
+        <a href="#contact" class="btn btn-secondary">Book a free call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">Services</h2>
+      <p class="section-sub">
+        Three focused offers designed for startups, freelancers and small local businesses.
+      </p>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <img src="https://ext.same-assets.com/3677438696/1085796937.jpeg" alt="Website management assistant">
+          <div class="service-body">
+            <div class="service-title">Website Management Assistant</div>
+            <p>Ongoing help with content updates, images and small fixes so your site never feels “out of date”.</p>
+            <div class="service-price">£200 one-off setup</div>
+            <div class="service-cta">
+              <a href="#contact" class="btn btn-secondary" style="width:100%;">Ask about this</a>
             </div>
-        </div>
-    </header>
+          </div>
+        </article>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-content">
-            <h1>Your Partner in Success</h1>
-            <p>Affordable Website Setup for Just £499</p>
-            <a href="#" class="btn btn-primary">Get Started</a>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services">
-        <div class="container">
-            <h2 class="section-title">Services</h2>
-            <div class="services-grid">
-                <!-- Service 1 -->
-                <div class="service-card">
-                    <img src="https://ext.same-assets.com/3677438696/1085796937.jpeg" alt="Website Management Assistant">
-                    <div class="service-card-content">
-                        <h3>Website Management Assistant</h3>
-                        <div class="service-divider"></div>
-                        <p class="service-price">£200</p>
-                        <a href="#" class="btn btn-secondary">View Course</a>
-                    </div>
-                </div>
-
-                <!-- Service 2 -->
-                <div class="service-card">
-                    <img src="https://ext.same-assets.com/3677438696/4164765247.jpeg" alt="Boost up">
-                    <div class="service-card-content">
-                        <h3>Boost up</h3>
-                        <div class="service-divider"></div>
-                        <p class="service-price">£150</p>
-                        <a href="#" class="btn btn-secondary">Book Now</a>
-                    </div>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="service-card">
-                    <img src="https://ext.same-assets.com/3677438696/3778808479.jpeg" alt="Website Design">
-                    <div class="service-card-content">
-                        <h3>Website Design</h3>
-                        <div class="service-divider"></div>
-                        <p class="service-price">£300</p>
-                        <a href="#" class="btn btn-secondary">Book Now</a>
-                    </div>
-                </div>
+        <article class="service-card">
+          <img src="https://ext.same-assets.com/3677438696/4164765247.jpeg" alt="Boost up service">
+          <div class="service-body">
+            <div class="service-title">Boost Up</div>
+            <p>A short project to refresh an existing website with clearer structure, better images and stronger CTAs.</p>
+            <div class="service-price">£150 project</div>
+            <div class="service-cta">
+              <a href="#contact" class="btn btn-secondary" style="width:100%;">Book a boost</a>
             </div>
-        </div>
-    </section>
+          </div>
+        </article>
 
-    <!-- Offerings Section -->
-    <section class="offerings">
-        <div class="container">
-            <h2 class="section-title">Our Offerings</h2>
-            <p>We don't have any products to show right now.</p>
-            <a href="#" class="btn btn-secondary">Explore Now</a>
-        </div>
-    </section>
-
-    <!-- Vision Section -->
-    <section class="vision">
-        <div class="container">
-            <h2 class="section-title">Vision</h2>
-            <div class="vision-grid">
-                <div class="vision-image">
-                    <img src="https://ext.same-assets.com/3677438696/434916299.jpeg" alt="Our Mission">
-                </div>
-                <div class="vision-content">
-                    <h3>Our Mission</h3>
-                    <p>At Be Digital, we are committed to empowering businesses and individuals by enhancing their online presence. Specializing in website creation, we help increase visibility and engagement through tailored digital solutions at a competitive price. With a complete setup for only £499, we turn aspirations into reality, ensuring that every client achieves their unique digital goals.</p>
-                    <a href="#" class="btn btn-secondary">Learn More</a>
-                </div>
+        <article class="service-card">
+          <img src="https://ext.same-assets.com/3677438696/3778808479.jpeg" alt="Website design service">
+          <div class="service-body">
+            <div class="service-title">Website Design</div>
+            <p>Modern, mobile-friendly website tailored to your brand with a clear user journey and persuasive copy.</p>
+            <div class="service-price">From £300</div>
+            <div class="service-cta">
+              <a href="#contact" class="btn btn-secondary" style="width:100%;">Start a new site</a>
             </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY / SOCIAL PROOF -->
+  <section id="why">
+    <div class="container two-col">
+      <div>
+        <h2 class="section-title">Why Be Digital?</h2>
+        <p class="section-sub">
+          A student-run digital service combining design basics with psychology-inspired, user-friendly layouts.
+        </p>
+
+        <div class="card">
+          <h3>Designed to guide decisions</h3>
+          <p>
+            Colours, spacing and CTAs are chosen to keep things calm and clear. Bright accent buttons highlight the next step,
+            while the dark background lets important sections stand out without feeling overwhelming.
+          </p>
+          <p>
+            Each section follows a simple journey: understand the offer → see options → see proof → contact. This reduces
+            confusion and helps visitors make faster, more confident decisions.
+          </p>
         </div>
-    </section>
 
-    <!-- Gallery Section -->
-    <section class="gallery">
-        <div class="container">
-            <div class="gallery-grid">
-                <img src="https://ext.same-assets.com/3677438696/2158457862.jpeg" alt="Gallery 1">
-                <img src="https://ext.same-assets.com/3677438696/4060206343.jpeg" alt="Gallery 2">
-                <img src="https://ext.same-assets.com/3677438696/2523733925.jpeg" alt="Gallery 3">
-                <img src="https://ext.same-assets.com/3677438696/2282412960.jpeg" alt="Gallery 4">
-            </div>
+        <div class="card">
+          <h3>Made for small businesses</h3>
+          <p>
+            Packages focus on what most small businesses actually need: a clean site that loads fast, looks trustworthy
+            and is easy to update later.
+          </p>
         </div>
-    </section>
+      </div>
 
-    <!-- Footer -->
-    <footer id="contact">
-        <div class="container">
-            <div class="footer-grid">
-                <!-- Newsletter -->
-                <div class="footer-section">
-                    <h3>Stay Connected</h3>
-                    <form>
-                        <label for="email" style="color: #d4e157; display: block; margin-bottom: 0.5rem;">Email *</label>
-                        <input type="email" id="email" placeholder="Enter your email">
-                        <label class="checkbox-label">
-                            <input type="checkbox" id="newsletter">
-                            <span>Yes, subscribe me to your newsletter. *</span>
-                        </label>
-                        <button type="submit" class="btn btn-secondary" style="width: 100%;">Subscribe</button>
-                    </form>
-                </div>
-
-                <!-- Contact Info -->
-                <div class="footer-section">
-                    <h3>Be Digital</h3>
-                    <p style="margin-bottom: 1rem;">0788906865</p>
-                    <p style="margin-bottom: 2rem;">narayansinghtiwana@gmail.com</p>
-                    <div class="footer-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Accessibility Statement</a>
-                        <a href="#">Shipping Policy</a>
-                        <a href="#">Terms & Conditions</a>
-                        <a href="#">Refund Policy</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Footer Bottom -->
-            <div class="footer-bottom">
-                <p class="copyright">© 2035 by Be Digital. Powered and secured by Wix</p>
-                <div class="social-links">
-                    <a href="#"><img src="https://ext.same-assets.com/3677438696/3250546377.png" alt="Facebook"></a>
-                    <a href="#"><img src="https://ext.same-assets.com/3677438696/4230856337.png" alt="Instagram"></a>
-                    <a href="#"><img src="https://ext.same-assets.com/3677438696/3573185563.png" alt="X"></a>
-                    <a href="#"><img src="https://ext.same-assets.com/3677438696/2098547166.png" alt="TikTok"></a>
-                </div>
-            </div>
+      <div>
+        <h3 style="margin-bottom:1rem;">What people say</h3>
+        <div class="testimonials">
+          <div class="card">
+            <p class="quote">
+              “The layout is simple and direct. I knew within seconds what the service was and how much it costs.”
+            </p>
+            <div class="quote-name">Local café owner (test user)</div>
+            <div class="quote-role">Usability test feedback</div>
+          </div>
+          <div class="card">
+            <p class="quote">
+              “The call-to-action buttons stood out without feeling pushy. It felt easy to click through the sections.”
+            </p>
+            <div class="quote-name">Student peer reviewer</div>
+            <div class="quote-role">Design review</div>
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="container">
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-sub">
+        A simple four-step process so you know exactly what will happen if you decide to work with Be Digital.
+      </p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">Step 1</div>
+          <div class="step-title">Quick call & goals</div>
+          <p>You share your business, budget and main goal for the website.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">Step 2</div>
+          <div class="step-title">Plan your pages</div>
+          <p>We agree the main pages/sections, colours and tone of voice that match your brand.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">Step 3</div>
+          <div class="step-title">Design & build</div>
+          <p>Your site is built, tested on different screens and refined based on your feedback.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">Step 4</div>
+          <div class="step-title">Launch & handover</div>
+          <p>The site goes live and you get basic training on how to update key content.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-sub">
+        Ready to talk or just curious how this could work for your business? Use the details below or send a quick message.
+      </p>
+
+      <div class="contact-grid">
+        <div>
+          <div class="contact-row">
+            <span>Name:</span> Narayan Singh Tiwana
+          </div>
+          <div class="contact-row">
+            <span>Phone:</span> 0788906865
+          </div>
+          <div class="contact-row">
+            <span>Email:</span>
+            <a href="mailto:narayansinghitiwana@gmail.com">narayansinghitiwana@gmail.com</a>
+          </div>
+          <div class="contact-row">
+            <span>Location:</span> UK-based student project service
+          </div>
+          <p style="margin-top:1rem;font-size:.9rem;color:var(--muted);">
+            This is a university project website. Quotes and availability are for demonstration purposes only unless agreed separately.
+          </p>
+        </div>
+
+        <div>
+          <form onsubmit="handleSubmit(event)">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Your email" required>
+            <textarea name="message" placeholder="Your message" required></textarea>
+            <button type="submit" class="btn btn-primary" style="width:100%;">Send message (demo)</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <span>© 2035 Be Digital – Student project website.</span>
+      <span>Hosted on GitHub Pages.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu(){
+    const nav = document.getElementById('mainNav');
+    if(!nav) return;
+    const style = window.getComputedStyle(nav);
+    nav.style.display = (style.display === 'none') ? 'flex' : 'none';
+  }
+
+  function handleSubmit(e){
+    e.preventDefault();
+    alert("Thanks for your message! (Form is for demonstration only.)");
+    e.target.reset();
+  }
+</script>
+
 </body>
 </html>
