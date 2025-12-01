@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Basic SEO -->
-  <meta name="description" content="Be Digital helps small businesses get online with affordable website setup, design and ongoing support.">
+  <meta name="description" content="Be Digital offers affordable website setup, redesign and support for small businesses, freelancers and start-ups.">
 
   <style>
     *{margin:0;padding:0;box-sizing:border-box;}
@@ -17,8 +17,8 @@
       --card:#0d2320;
       --text:#e5f5f2;
       --muted:#a3b9b5;
-      --accent:#d4e157;      /* lime CTA colour */
-      --accent-soft:#8fc5d4; /* soft blue for secondary */
+      --accent:#d4e157;
+      --accent-soft:#8fc5d4;
       --border:#355954;
       --max:1100px;
     }
@@ -30,7 +30,7 @@
       line-height:1.6;
     }
 
-    a{color:inherit;text-decoration:none;}
+    a{text-decoration:none;color:inherit;}
 
     .container{
       max-width:var(--max);
@@ -38,30 +38,30 @@
       padding:0 20px;
     }
 
-    /* Header */
+    /* HEADER */
     header{
+      background:rgba(11,25,22,.97);
+      border-bottom:1px solid rgba(88,125,120,.4);
       position:sticky;
       top:0;
       z-index:50;
-      background:rgba(11,25,22,0.97);
-      border-bottom:1px solid rgba(88,125,120,0.5);
       backdrop-filter:blur(10px);
     }
     .nav-row{
       display:flex;
-      align-items:center;
       justify-content:space-between;
-      padding:.75rem 0;
+      align-items:center;
+      padding:.9rem 0;
     }
     .logo{
-      font-size:1.2rem;
-      font-weight:600;
       color:var(--accent);
-      letter-spacing:.05em;
+      font-weight:700;
+      font-size:1.3rem;
+      letter-spacing:.04em;
     }
     nav{
       display:flex;
-      gap:1.2rem;
+      gap:1.3rem;
       font-size:.9rem;
       color:var(--muted);
     }
@@ -70,37 +70,22 @@
     .hamburger{
       display:none;
       flex-direction:column;
-      gap:4px;
-      background:none;
-      border:none;
+      gap:5px;
       cursor:pointer;
     }
     .hamburger span{
-      width:20px;
+      width:22px;
       height:2px;
       background:var(--accent);
     }
 
-    /* Generic sections */
-    section{padding:4rem 0;}
-    h2.section-title{
-      font-size:2.2rem;
-      margin-bottom:.75rem;
-      color:var(--accent);
-    }
-    .section-sub{
-      color:var(--muted);
-      margin-bottom:2rem;
-      font-size:.95rem;
-    }
-
-    /* Hero */
+    /* HERO */
     .hero{
       position:relative;
       height:420px;
       display:flex;
-      justify-content:center;
       align-items:center;
+      justify-content:center;
       text-align:center;
       overflow:hidden;
     }
@@ -112,37 +97,37 @@
     }
     .hero-inner{
       position:relative;
-      z-index:2;
+      z-index:5;
       max-width:720px;
       padding:0 20px;
     }
     .hero-pill{
       display:inline-block;
-      padding:0.25rem .8rem;
+      padding:.25rem .8rem;
       border-radius:999px;
-      border:1px solid rgba(255,255,255,.5);
+      border:1px solid rgba(255,255,255,.45);
       font-size:.75rem;
       color:#fefefe;
       margin-bottom:.8rem;
     }
     .hero h1{
       font-size:2.6rem;
-      margin-bottom:.8rem;
       color:#fff;
+      margin-bottom:.7rem;
     }
     .hero h1 span{color:var(--accent);}
     .hero-lead{
       font-size:1.05rem;
       color:#f5f5f5;
-      margin-bottom:1.5rem;
+      margin-bottom:1rem;
     }
     .hero-price{
-      font-size:1.2rem;
-      margin-bottom:1.5rem;
+      font-size:1.1rem;
       color:var(--accent-soft);
+      margin-bottom:1.5rem;
     }
     .hero-price span{
-      font-size:1.5rem;
+      font-size:1.4rem;
       font-weight:700;
       color:var(--accent);
     }
@@ -157,55 +142,60 @@
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      padding:.8rem 1.6rem;
+      padding:.85rem 1.7rem;
       border-radius:999px;
-      border:none;
-      cursor:pointer;
       font-weight:600;
       font-size:.95rem;
+      cursor:pointer;
+      border:none;
       transition:all .18s;
-      text-decoration:none;
     }
     .btn-primary{
       background:#58b0bc;
       color:#122c28;
-      box-shadow:0 10px 25px rgba(22,163,174,.5);
+      box-shadow:0 10px 25px rgba(22,163,174,.45);
     }
     .btn-primary:hover{
       background:#4a9aa5;
       transform:translateY(-1px);
     }
     .btn-secondary{
-      background:transparent;
       border:1px solid var(--accent-soft);
       color:var(--accent-soft);
+      background:transparent;
     }
     .btn-secondary:hover{
       background:rgba(143,197,212,.15);
     }
 
-    /* Layout helpers */
-    .two-col{
-      display:grid;
-      grid-template-columns:minmax(0,3fr) minmax(0,2.5fr);
-      gap:2.5rem;
-      align-items:flex-start;
+    /* SECTIONS */
+    section{padding:4rem 0;}
+    .section-title{
+      color:var(--accent);
+      font-size:2.1rem;
+      margin-bottom:.7rem;
+    }
+    .section-sub{
+      color:var(--muted);
+      margin-bottom:2rem;
+      font-size:.95rem;
     }
 
     .card{
       background:var(--card);
-      border-radius:14px;
+      border-radius:12px;
       border:1px solid var(--border);
-      padding:1.5rem 1.6rem;
+      padding:1.4rem 1.5rem;
       margin-bottom:1.2rem;
     }
 
-    /* Services */
-    .services-grid{
+    .grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
       gap:1.5rem;
     }
+
+    /* SERVICES */
     .service-card{
       background:var(--card);
       border-radius:12px;
@@ -221,29 +211,36 @@
     }
     .service-body{
       padding:1.1rem 1.3rem 1.4rem;
-      flex:1;
       display:flex;
       flex-direction:column;
       gap:.4rem;
+      flex:1;
     }
     .service-title{
       font-size:1.1rem;
       font-weight:600;
     }
     .service-price{
-      font-size:1.1rem;
+      font-size:1.05rem;
       color:var(--accent);
       margin-top:.4rem;
     }
     .service-cta{
-      margin-top:.8rem;
+      margin-top:.7rem;
     }
 
-    /* Social proof */
+    /* WHY / SOCIAL PROOF */
+    .two-col{
+      display:grid;
+      grid-template-columns:minmax(0,3fr) minmax(0,2.5fr);
+      gap:2.4rem;
+      align-items:flex-start;
+    }
+
     .testimonials{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:1.3rem;
+      grid-template-columns:1fr;
+      gap:1rem;
     }
     .quote{
       font-size:.92rem;
@@ -260,34 +257,27 @@
       color:var(--muted);
     }
 
-    /* Process */
+    /* PROCESS */
     .steps{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-      gap:1rem;
-    }
-    .step{
-      background:var(--card);
-      border-radius:12px;
-      border:1px solid var(--border);
-      padding:1rem 1.1rem;
-      font-size:.9rem;
-    }
-    .step-num{
-      font-size:.8rem;
-      color:var(--accent-soft);
-      margin-bottom:.2rem;
+      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+      gap:1.3rem;
     }
     .step-title{
       font-weight:600;
       margin-bottom:.2rem;
     }
+    .step-num{
+      font-size:.8rem;
+      color:var(--accent-soft);
+      margin-bottom:.1rem;
+    }
 
-    /* Contact */
+    /* CONTACT */
     .contact-grid{
       display:grid;
       grid-template-columns:minmax(0,2.2fr) minmax(0,2.2fr);
-      gap:2rem;
+      gap:2.2rem;
     }
     .contact-row{
       margin-bottom:.6rem;
@@ -297,52 +287,48 @@
       color:var(--muted);
       margin-right:.4rem;
     }
+
     form{
       display:grid;
-      gap:.7rem;
+      gap:.85rem;
     }
     input,textarea{
       width:100%;
-      padding:.7rem .8rem;
+      padding:.8rem .9rem;
       border-radius:8px;
       border:1px solid var(--border);
       background:#0a1916;
       color:var(--text);
       font-size:.9rem;
     }
+    textarea{min-height:120px;resize:vertical;}
     input:focus,textarea:focus{
       outline:none;
       border-color:var(--accent-soft);
     }
-    textarea{resize:vertical;min-height:120px;}
 
-    /* Footer */
+    /* FOOTER */
     footer{
-      background:#0b1916;
-      border-top:1px solid rgba(65,99,92,.8);
-      padding:1.4rem 0 1.8rem;
-      font-size:.8rem;
+      padding:1.5rem 0 1.8rem;
+      background:var(--bg-dark);
       color:var(--muted);
-    }
-    .footer-inner{
-      display:flex;
-      justify-content:space-between;
-      gap:1rem;
-      flex-wrap:wrap;
-      align-items:center;
+      text-align:center;
+      font-size:.85rem;
+      border-top:1px solid rgba(65,99,92,.8);
+      margin-top:2rem;
     }
 
-    /* Responsive */
+    /* RESPONSIVE */
     @media(max-width:900px){
-      .two-col{grid-template-columns:1fr;}
-      .contact-grid{grid-template-columns:1fr;}
       nav{display:none;}
       .hamburger{display:flex;}
+      .two-col{grid-template-columns:1fr;}
+      .contact-grid{grid-template-columns:1fr;}
       .hero{height:380px;}
     }
     @media(max-width:600px){
       .hero h1{font-size:2.1rem;}
-      h2.section-title{font-size:1.9rem;}
+      .section-title{font-size:1.9rem;}
       .hero{height:360px;}
     }
   </style>
@@ -350,20 +336,19 @@
 <body>
 
 <header>
-  <div class="container">
-    <div class="nav-row">
-      <a href="#top" class="logo">Be Digital</a>
+  <div class="container nav-row">
+    <a class="logo" href="#top">Be Digital</a>
 
-      <nav id="mainNav">
-        <a href="#services">Services</a>
-        <a href="#why">Why us</a>
-        <a href="#process">Process</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <nav id="mainNav">
+      <a href="#top">Home</a>
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-      <button class="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
-      </button>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
     </div>
   </div>
 </header>
@@ -373,17 +358,17 @@
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-inner">
-      <div class="hero-pill">Your partner in affordable digital growth</div>
+      <div class="hero-pill">Student project · Affordable digital service</div>
       <h1>Your Partner in <span>Digital Success</span></h1>
       <p class="hero-lead">
-        Simple, clean websites for small businesses that want to look professional without paying agency prices.
+        Simple, modern websites for small businesses that want to look professional without agency pricing.
       </p>
       <p class="hero-price">
         Complete website setup package from <span>£499</span>
       </p>
       <div class="hero-ctas">
-        <a href="#services" class="btn btn-primary">View services</a>
-        <a href="#contact" class="btn btn-secondary">Book a free call</a>
+        <button class="btn btn-primary" onclick="scrollToId('services')">View services</button>
+        <button class="btn btn-secondary" onclick="scrollToId('contact')">Book a free call</button>
       </div>
     </div>
   </section>
@@ -393,42 +378,42 @@
     <div class="container">
       <h2 class="section-title">Services</h2>
       <p class="section-sub">
-        Three focused offers designed for startups, freelancers and small local businesses.
+        Three focused offers designed for start-ups, freelancers and local businesses.
       </p>
 
-      <div class="services-grid">
+      <div class="grid">
         <article class="service-card">
-          <img src="https://ext.same-assets.com/3677438696/1085796937.jpeg" alt="Website management assistant">
+          <img src="https://ext.same-assets.com/3677438696/1085796937.jpeg" alt="Website management">
           <div class="service-body">
             <div class="service-title">Website Management Assistant</div>
-            <p>Ongoing help with content updates, images and small fixes so your site never feels “out of date”.</p>
+            <p>Ongoing help with content updates and small fixes so your site always stays up to date.</p>
             <div class="service-price">£200 one-off setup</div>
             <div class="service-cta">
-              <a href="#contact" class="btn btn-secondary" style="width:100%;">Ask about this</a>
+              <button class="btn btn-secondary" onclick="scrollToId('contact')" style="width:100%;">Ask about this</button>
             </div>
           </div>
         </article>
 
         <article class="service-card">
-          <img src="https://ext.same-assets.com/3677438696/4164765247.jpeg" alt="Boost up service">
+          <img src="https://ext.same-assets.com/3677438696/4164765247.jpeg" alt="Boost up">
           <div class="service-body">
             <div class="service-title">Boost Up</div>
-            <p>A short project to refresh an existing website with clearer structure, better images and stronger CTAs.</p>
+            <p>Short project to refresh an existing website with better layout, images and clearer CTAs.</p>
             <div class="service-price">£150 project</div>
             <div class="service-cta">
-              <a href="#contact" class="btn btn-secondary" style="width:100%;">Book a boost</a>
+              <button class="btn btn-secondary" onclick="scrollToId('contact')" style="width:100%;">Book a boost</button>
             </div>
           </div>
         </article>
 
         <article class="service-card">
-          <img src="https://ext.same-assets.com/3677438696/3778808479.jpeg" alt="Website design service">
+          <img src="https://ext.same-assets.com/3677438696/3778808479.jpeg" alt="Website design">
           <div class="service-body">
             <div class="service-title">Website Design</div>
-            <p>Modern, mobile-friendly website tailored to your brand with a clear user journey and persuasive copy.</p>
+            <p>Full website setup tailored to your brand, with mobile-friendly design and clear navigation.</p>
             <div class="service-price">From £300</div>
             <div class="service-cta">
-              <a href="#contact" class="btn btn-secondary" style="width:100%;">Start a new site</a>
+              <button class="btn btn-secondary" onclick="scrollToId('contact')" style="width:100%;">Start a new site</button>
             </div>
           </div>
         </article>
@@ -436,49 +421,49 @@
     </div>
   </section>
 
-  <!-- WHY / SOCIAL PROOF -->
+  <!-- WHY US -->
   <section id="why">
     <div class="container two-col">
       <div>
         <h2 class="section-title">Why Be Digital?</h2>
         <p class="section-sub">
-          A student-run digital service combining design basics with psychology-inspired, user-friendly layouts.
+          A simple service focused on clarity, trust and conversion — built as part of a Business Management project.
         </p>
 
         <div class="card">
-          <h3>Designed to guide decisions</h3>
+          <h3>Designed with psychology in mind</h3>
           <p>
-            Colours, spacing and CTAs are chosen to keep things calm and clear. Bright accent buttons highlight the next step,
-            while the dark background lets important sections stand out without feeling overwhelming.
+            Colours, spacing and call-to-action buttons are chosen to be calm but clear. The dark green background supports trust,
+            while lime accents highlight prices and actions without looking too aggressive.
           </p>
           <p>
-            Each section follows a simple journey: understand the offer → see options → see proof → contact. This reduces
-            confusion and helps visitors make faster, more confident decisions.
+            Sections follow a logical journey: first understand the offer, then see the services, then learn why to trust the
+            brand, and finally how the process works.
           </p>
         </div>
 
         <div class="card">
-          <h3>Made for small businesses</h3>
+          <h3>Focused on real small-business problems</h3>
           <p>
-            Packages focus on what most small businesses actually need: a clean site that loads fast, looks trustworthy
-            and is easy to update later.
+            Be Digital is aimed at people who know they need a website but feel overwhelmed by tools and costs. Packages are
+            straightforward, and communication is kept friendly and simple.
           </p>
         </div>
       </div>
 
       <div>
-        <h3 style="margin-bottom:1rem;">What people say</h3>
+        <h3 style="margin-bottom:1rem;">What people say (test feedback)</h3>
         <div class="testimonials">
           <div class="card">
             <p class="quote">
-              “The layout is simple and direct. I knew within seconds what the service was and how much it costs.”
+              “Within a few seconds I could see what the service was and how much it costs.”
             </p>
-            <div class="quote-name">Local café owner (test user)</div>
-            <div class="quote-role">Usability test feedback</div>
+            <div class="quote-name">Local test business owner</div>
+            <div class="quote-role">Usability testing</div>
           </div>
           <div class="card">
             <p class="quote">
-              “The call-to-action buttons stood out without feeling pushy. It felt easy to click through the sections.”
+              “The buttons stood out, but the page still felt calm and easy to scroll.”
             </p>
             <div class="quote-name">Student peer reviewer</div>
             <div class="quote-role">Design review</div>
@@ -493,29 +478,29 @@
     <div class="container">
       <h2 class="section-title">How It Works</h2>
       <p class="section-sub">
-        A simple four-step process so you know exactly what will happen if you decide to work with Be Digital.
+        A simple four-step process so you always know what will happen next.
       </p>
 
       <div class="steps">
-        <div class="step">
+        <div class="card">
           <div class="step-num">Step 1</div>
-          <div class="step-title">Quick call & goals</div>
-          <p>You share your business, budget and main goal for the website.</p>
+          <div class="step-title">Quick discovery call</div>
+          <p>Understand your business, goals and what success looks like for your website.</p>
         </div>
-        <div class="step">
+        <div class="card">
           <div class="step-num">Step 2</div>
-          <div class="step-title">Plan your pages</div>
-          <p>We agree the main pages/sections, colours and tone of voice that match your brand.</p>
+          <div class="step-title">Plan the pages</div>
+          <p>Agree which pages/sections you need, and choose colours and tone of voice.</p>
         </div>
-        <div class="step">
+        <div class="card">
           <div class="step-num">Step 3</div>
           <div class="step-title">Design & build</div>
-          <p>Your site is built, tested on different screens and refined based on your feedback.</p>
+          <p>Build your site, test it across devices and refine it based on your feedback.</p>
         </div>
-        <div class="step">
+        <div class="card">
           <div class="step-num">Step 4</div>
-          <div class="step-title">Launch & handover</div>
-          <p>The site goes live and you get basic training on how to update key content.</p>
+          <div class="step-title">Launch & support</div>
+          <p>Publish the site (e.g. via GitHub Pages) and offer optional ongoing help.</p>
         </div>
       </div>
     </div>
@@ -526,13 +511,13 @@
     <div class="container">
       <h2 class="section-title">Contact</h2>
       <p class="section-sub">
-        Ready to talk or just curious how this could work for your business? Use the details below or send a quick message.
+        This is a student project website. Use the details below for demonstration or coursework reference.
       </p>
 
       <div class="contact-grid">
         <div>
           <div class="contact-row">
-            <span>Name:</span> Narayan Singh Tiwana
+            <span>Name:</span> Narayan Singh
           </div>
           <div class="contact-row">
             <span>Phone:</span> 0788906865
@@ -542,10 +527,10 @@
             <a href="mailto:narayansinghitiwana@gmail.com">narayansinghitiwana@gmail.com</a>
           </div>
           <div class="contact-row">
-            <span>Location:</span> UK-based student project service
+            <span>University:</span> St Mary's University – Business Management
           </div>
           <p style="margin-top:1rem;font-size:.9rem;color:var(--muted);">
-            This is a university project website. Quotes and availability are for demonstration purposes only unless agreed separately.
+            Note: This form is for demonstration only and does not store real data.
           </p>
         </div>
 
@@ -563,25 +548,25 @@
 </main>
 
 <footer>
-  <div class="container">
-    <div class="footer-inner">
-      <span>© 2035 Be Digital – Student project website.</span>
-      <span>Hosted on GitHub Pages.</span>
-    </div>
-  </div>
+  © 2035 Be Digital – Student project website. Hosted on GitHub Pages.
 </footer>
 
 <script>
   function toggleMenu(){
-    const nav = document.getElementById('mainNav');
+    const nav = document.getElementById("mainNav");
     if(!nav) return;
     const style = window.getComputedStyle(nav);
-    nav.style.display = (style.display === 'none') ? 'flex' : 'none';
+    nav.style.display = (style.display === "none") ? "flex" : "none";
+  }
+
+  function scrollToId(id){
+    const el = document.getElementById(id);
+    if(el) el.scrollIntoView({behavior:"smooth"});
   }
 
   function handleSubmit(e){
     e.preventDefault();
-    alert("Thanks for your message! (Form is for demonstration only.)");
+    alert("Thanks for your message! (This form is only a demo for the project.)");
     e.target.reset();
   }
 </script>
